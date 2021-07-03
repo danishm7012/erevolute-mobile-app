@@ -124,7 +124,7 @@ export default StyleSheet.create({
     marginTop: 15,
     color: '#444',
     textTransform: 'uppercase',
-    fontSize: 20,
+    //  fontSize: 20,
     marginLeft: 15,
     fontWeight: '800',
 

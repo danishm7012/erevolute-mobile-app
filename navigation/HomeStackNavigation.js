@@ -1,3 +1,4 @@
+import GetCourse from '../screen/home/GetCourse'
 import Home from '../screen/home/Home'
 import HomeDetail from './../screen/home/HomeDetail'
 import { Platform } from 'react-native'
@@ -11,6 +12,9 @@ const HomeUsStackNavigation = createStackNavigator(
     },
     Home_Detail: {
       screen: HomeDetail,
+    },
+    Get_Course: {
+      screen: GetCourse,
     },
   },
   {

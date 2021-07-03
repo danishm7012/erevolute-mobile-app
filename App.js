@@ -1,11 +1,28 @@
 import * as Font from 'expo-font'
 
 import React, { useState } from 'react'
+import { applyMiddleware, combineReducers, createStore } from 'redux'
 
 import AppLoading from 'expo-app-loading'
-import MainDrawerNavigator from './navigation/MainStackNavigation'
+import NavigationContainer from './navigation/NavigationContainer'
+import { Provider } from 'react-redux'
+import ReduxThunk from 'redux-thunk'
 import { StatusBar } from 'expo-status-bar'
+import contactReducer from './screen/reducer/contactReducer'
 import { enableScreens } from 'react-native-screens'
+import getCourseFormData from './screen/reducer/getCourseFormData'
+import userReducer from './screen/reducer/userReducer'
+
+const rootReducer = combineReducers({
+  // products: productsReducer,
+  // cart: cartReducer,
+  // orders: ordersReducer
+  contactUsers: contactReducer,
+  enrollUser: getCourseFormData,
+  auth: userReducer,
+})
+
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk))
 
 enableScreens()
 const fetchFonts = () => {
@@ -35,5 +52,9 @@ export default function App() {
       </>
     )
   }
-  return <MainDrawerNavigator />
+  return (
+    <Provider store={store}>
+      <NavigationContainer />
+    </Provider>
+  )
 }

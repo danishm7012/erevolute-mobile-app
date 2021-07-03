@@ -24,7 +24,8 @@ function ProjectDetailHeader({ headerimage, address, title }) {
       </View>
       <View
         style={{
-          width: screenWidth,
+          flexGrow: 1,
+
           justifyContent: 'center',
           alignItems: 'center',
         }}
@@ -32,33 +33,39 @@ function ProjectDetailHeader({ headerimage, address, title }) {
         <View
           style={{
             width: screenWidth / 1.04,
-            height: screenHeight / 11,
+            height: screenHeight / 9,
             elevation: 20,
             backgroundColor: '#fff',
+            paddingRight: 15,
           }}
         >
           <View
             style={{
-              width: screenWidth / 1.1,
-              justifyContent: 'center',
-
+              flexGrow: 1,
+              // justifyContent: 'space-between',
+              justifyContent: 'space-around',
               alignItems: 'center',
+
               flexDirection: 'row',
             }}
           >
-            <Ionicons
-              name='albums-outline'
-              size={29}
-              color='#00aeff'
-              style={{ marginTop: 8 }}
-            />
-
             <Text
               style={[
-                { fontSize: 24, textAlign: 'center', color: '#000000' },
+                {
+                  fontSize: 20,
+                  flexBasis: 330,
+                  textAlign: 'center',
+                  color: '#000000',
+                },
                 AllStyle.Aboutheading,
               ]}
             >
+              <Ionicons
+                name='albums-outline'
+                size={35}
+                color='#00aeff'
+                style={{ marginTop: 8 }}
+              />
               {title}
             </Text>
           </View>
