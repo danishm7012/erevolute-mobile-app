@@ -1,15 +1,13 @@
-import * as Animatable from 'react-native-animatable'
 import * as authActions from '../action/userAction'
 
 import {
   ActivityIndicator,
   Alert,
-  Animated,
+  AsyncStorage,
   Dimensions,
-  ImageBackground,
+  LogBox,
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -18,9 +16,8 @@ import {
 import React, { useCallback, useEffect, useReducer, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
+import Color from '../../colors/Color'
 import Input from './Input.js'
-import { Ionicons } from '@expo/vector-icons'
-import { TypingAnimation } from 'react-native-typing-animation'
 
 const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE'
 const screenWidth = Dimensions.get('screen').width
@@ -49,48 +46,9 @@ const formReducer = (state, action) => {
 }
 
 const Login = (props) => {
+  LogBox.ignoreLogs(['Setting a timer for a'])
   const [error, setError] = useState()
   const [isLoading, setIsLoading] = useState(false)
-  const [typing_email, setTyping_email] = useState(false)
-  const [typing_password, setTyping_password] = useState(false)
-  const [localId, setLocalId] = useState(null)
-  const [enable, setEnable] = useState(true)
-  const userId = useSelector((state) => state.auth.userId)
-  //setLocalId(userId)
-  // useEffect(() => {
-  //   setLocalId(userId)
-  // })
-  console.log('userId after useSelector', localId)
-  const animation_login = new Animated.Value(screenWidth - 40)
-  const _foucus = (value) => {
-    if (value == 'email') {
-      setTyping_email(true)
-      setTyping_password(false)
-    } else {
-      setTyping_email(false)
-      setTyping_password(true)
-    }
-  }
-
-  const _typing = () => {
-    return <TypingAnimation dotColor='#93278f' style={{ marginRight: 25 }} />
-  }
-
-  const _animation = () => {
-    Animated.timing(animation_login, {
-      toValue: 40,
-      duration: 250,
-      useNativeDriver: false,
-    }).start()
-
-    setTimeout(() => {
-      setEnable(false)
-      setTyping_email(false)
-      setTyping_password(false)
-    }, 150)
-  }
-  const widthanim = animation_login
-
   // SignUp functions
 
   const dispatch = useDispatch()
@@ -111,7 +69,6 @@ const Login = (props) => {
       Alert.alert('An Error Occurred!', error, [{ text: 'Okay' }])
     }
   }, [error])
-
   const loginHandler = async () => {
     setError(null)
     setIsLoading(true)
@@ -122,10 +79,11 @@ const Login = (props) => {
           formState.inputValues.password
         )
       )
-
-      console.log('user Id of login form after dispatch : !!!', userId)
-      if (localId === 'VPxsMc7DqKfUOfRpKLq7QrsxIbv2') {
-        props.navigate.navigate('Auth')
+      const userData = await AsyncStorage.getItem('userData')
+      const transformedData = JSON.parse(userData)
+      const { token, userId, expiryDate } = transformedData
+      if (userId === 'VPxsMc7DqKfUOfRpKLq7QrsxIbv2') {
+        props.navigation.navigate('AdminScreen')
       } else {
         props.navigation.navigate('appScreen')
       }
@@ -151,12 +109,7 @@ const Login = (props) => {
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <View style={styles.container}>
-          {/* <StatusBar barStyle="light-content" /> */}
           <View style={styles.header}>
-            {/* <ImageBackground
-              source={require('../../assets/erevolute.png')}
-              style={styles.imageBackground}
-            > */}
             <Text
               style={{
                 color: '#121212',
@@ -168,12 +121,11 @@ const Login = (props) => {
             </Text>
             <Text
               style={{
-                color: '#34ed56',
+                color: Color.accentColour,
               }}
             >
               Sign in to continue
             </Text>
-            {/* </ImageBackground> */}
           </View>
           <View style={styles.footer}>
             <Text
@@ -197,9 +149,7 @@ const Login = (props) => {
                 onInputChange={inputChangeHandler}
                 initialValue=''
                 style={styles.textInput}
-                onFocus={() => _foucus('email')}
               />
-              {typing_email ? _typing() : null}
             </View>
 
             <Text
@@ -224,9 +174,7 @@ const Login = (props) => {
                 onInputChange={inputChangeHandler}
                 initialValue=''
                 style={styles.textInput}
-                onFocus={() => _foucus('password')}
               />
-              {typing_password ? _typing() : null}
             </View>
             {isLoading ? (
               <ActivityIndicator size={'large'} color='#f57842' />
@@ -275,13 +223,10 @@ var styles = StyleSheet.create({
     alignItems: 'center',
   },
   footer: {
-    //flex: 1,
-    // paddingTop: 150,
     height: height / 1.3,
     padding: 20,
   },
   imageBackground: {
-    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     resizeMode: 'stretch',

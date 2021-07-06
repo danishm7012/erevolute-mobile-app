@@ -15,10 +15,8 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { deleteProduct, fetchContactFormData } from '../action/contactAction'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { ActivityIndicatorBase } from 'react-native'
 import Color from '../../colors/Color'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
-import firebase from '../../firebase/config'
 
 const screenWidth = Dimensions.get('screen').width
 const screenHeight = Dimensions.get('screen').height

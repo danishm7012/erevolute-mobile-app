@@ -6,7 +6,7 @@ import * as firebase from 'firebase'
 import {
   ActivityIndicator,
   Alert,
-  Animated,
+  AsyncStorage,
   Dimensions,
   Image,
   Picker,
@@ -18,22 +18,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { HeaderButtons, Item } from 'react-navigation-header-buttons'
-import React, { useCallback, useEffect, useReducer, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import { Button } from 'react-native-elements'
-import Color from '../../colors/Color'
-import HeaderButton from '../../component/headerbutton/HeaderButton'
 import Input from '../../component/inputField/InputField'
-import { Ionicons } from '@expo/vector-icons'
 import TextCard from '../../component/card/TextCard'
 import { createEnrollCourseForm } from '../action/getCourseFormData'
 import { firebaseConfig } from '../../firebase/config'
 import { useDispatch } from 'react-redux'
 
-//import { storage } from '../../firebase/config'
-
-//const storage = firebase.storage()
 const screenWidth = Dimensions.get('screen').width
 function GetCourse() {
   if (!firebase.apps.length) {
@@ -45,7 +38,6 @@ function GetCourse() {
   const [address, setAddress] = useState('')
   const [imageURI, setImageURI] = useState('')
   const [selectedValue, setSelectedValue] = useState('java')
-  const [image, setImage] = useState(null)
   const [disimage, setdisImage] = useState(null)
   const [uploading, setUploading] = useState(false)
   const dispatch = useDispatch()
@@ -92,64 +84,14 @@ function GetCourse() {
     )
   }
 
-  // const uploadImage = async (disimage) => {
-  //   const response = await fetch(disimage)
-  //   const blob = await response.blob()
-  //   var ref = storage.ref().child('my-image')
-
-  //   // return ref.put(blob)
-  //   const fileupload = ref.put(blob)
-  //   fileupload.on(
-  //     'state_changed',
-  //     (snapshot) => {},
-  //     (error) => {
-  //       console.log(error)
-  //     },
-  //     () => {
-  //       storage
-  //         .ref('images')
-  //         .child('my-image')
-  //         .getDownloadURL()
-  //         .then((url) => {
-  //           console.log(url)
-  //           setImageURI(url)
-  //         })
-  //     }
-  //   )
-  // }
-
   const submitHandler = useCallback(() => {
-    // const uploadImage = storage.ref(`images/mountains.jpg`).put(image)
-    // uploadImage.on(
-    //   'state_changed',
-    //   (snapshot) => {},
-    //   (error) => {
-    //     console.log(error)
-    //   },
-    //   () => {
-    //     storage
-    //       .ref('images')
-    //       .child('mountains.jpg')
-    //       .getDownloadURL()
-    //       .then((url) => {
-    //         console.log(url)
-    //         setImageURI(url)
-    //       })
-    //   }
-    // )
-
-    // .getDownloadURL()
-    // .then((url) => {
-    //   console.log(url)
-    //   setImageURI(url)
-    // })
-
     if (
       name === '' ||
       phoneNum === '' ||
       email === '' ||
       address === '' ||
-      selectedValue === ''
+      selectedValue === '' ||
+      imageURI === ''
     ) {
       Alert.alert('Please enter all input fields')
     } else {
@@ -197,8 +139,6 @@ function GetCourse() {
 
     if (!result.cancelled) {
       const response = await fetch(result.uri)
-      //     const blob = await response.blob()
-      //   setImage(result.base64)
       setdisImage(result.uri)
     }
   }
@@ -242,11 +182,7 @@ function GetCourse() {
                   value={name}
                   onChangeText={(text) => setName(text)}
                   autoCapitalize='none'
-                  //  errorText='Please enter a valid email address.'
-                  //    onInputChange={inputChangeHandler}
-                  // initialValue=''
                   style={styles.textInput}
-                  //   onFocus={}
                 />
               </View>
 
@@ -267,13 +203,9 @@ function GetCourse() {
                   value={phoneNum}
                   onChangeText={(text) => setPhoneNum(text)}
                   keyboardType='number-pad'
-                  // email
                   autoCapitalize='none'
-                  //  errorText='Please enter a valid email address.'
-                  //    onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  //   onFocus={}
                 />
               </View>
 
@@ -296,11 +228,7 @@ function GetCourse() {
                   autoCapitalize='none'
                   value={email}
                   onChangeText={(text) => setEmail(text)}
-                  //  errorText='Please enter a valid email address.'
-                  //    onInputChange={inputChangeHandler}
-                  // initialValue=''
                   style={styles.textInput}
-                  //   onFocus={}
                 />
               </View>
 
@@ -318,17 +246,11 @@ function GetCourse() {
                 <Input
                   id='address'
                   keyboardType='default'
-                  // secureTextEntry
                   required
                   value={address}
                   onChangeText={(text) => setAddress(text)}
-                  // minLength={5}
                   autoCapitalize='none'
-                  //errorText='Please enter a valid password.'
-                  //          onInputChange={inputChangeHandler}
-                  // initialValue=''
                   style={styles.textInput}
-                  // onFocus={}
                 />
               </View>
               <Picker
@@ -419,7 +341,6 @@ function GetCourse() {
                 ) : (
                   <ActivityIndicator size='large' color='#000' />
                 )}
-                {/* .bind(this, disimage) */}
                 <Button title='Submit' type='solid' onPress={submitHandler} />
               </View>
             </View>
@@ -432,17 +353,6 @@ function GetCourse() {
 GetCourse.navigationOptions = (navData) => {
   return {
     headerTitle: 'Register yourself',
-    // headerLeft: () => (
-    //   <HeaderButtons HeaderButtonComponent={HeaderButton}>
-    //     <Item
-    //       title='Menu'
-    //       iconName='ios-menu'
-    //       onPress={() => {
-    //         navData.navigation.toggleDrawer()
-    //       }}
-    //     />
-    //   </HeaderButtons>
-    // ),
   }
 }
 
@@ -458,8 +368,6 @@ var styles = StyleSheet.create({
     flex: 1,
   },
   footer: {
-    //flex: 1,
-    // paddingTop: 150,
     marginTop: 20,
     width: screenWidth / 1.04,
     backgroundColor: '#fff',
@@ -467,10 +375,8 @@ var styles = StyleSheet.create({
     padding: 20,
   },
   imageBackground: {
-    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // resizeMode: 'stretch',
     width: '100%',
     height: height / 3,
   },

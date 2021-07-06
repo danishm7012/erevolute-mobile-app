@@ -1,11 +1,8 @@
 import * as ImagePicker from 'expo-image-picker'
 
 import {
-  ActivityIndicator,
-  Animated,
   Dimensions,
   Image,
-  Picker,
   Platform,
   SafeAreaView,
   ScrollView,
@@ -14,23 +11,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
-import { HeaderButtons, Item } from 'react-navigation-header-buttons'
-import React, { useCallback, useEffect, useReducer, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Button } from 'react-native-elements'
-import Color from '../../colors/Color'
-import HeaderButton from '../../component/headerbutton/HeaderButton'
 import Input from '../../component/inputField/InputField'
-import { Ionicons } from '@expo/vector-icons'
 import TextCard from '../../component/card/TextCard'
 
 const screenWidth = Dimensions.get('screen').width
 function CareerHiringForm() {
-  //     const [isLoading, setIsLoading] = useState(false)
-  // const [typing_email, setTyping_email] = useState(false)
-  //   const [typing_password, setTyping_password] = useState(false)
-  //   const [enable, setEnable] = useState(true)
-  const [selectedValue, setSelectedValue] = useState('java')
   const [image, setImage] = useState(null)
 
   useEffect(() => {
@@ -97,11 +85,8 @@ function CareerHiringForm() {
                   required
                   name
                   autoCapitalize='none'
-                  //  errorText='Please enter a valid email address.'
-                  //    onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  //   onFocus={}
                 />
               </View>
 
@@ -120,13 +105,9 @@ function CareerHiringForm() {
                   id='phone'
                   keyboardType='default'
                   required
-                  // email
                   autoCapitalize='none'
-                  //  errorText='Please enter a valid email address.'
-                  //    onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  //   onFocus={}
                 />
               </View>
 
@@ -147,11 +128,8 @@ function CareerHiringForm() {
                   required
                   email
                   autoCapitalize='none'
-                  //  errorText='Please enter a valid email address.'
-                  //    onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  //   onFocus={}
                 />
               </View>
 
@@ -169,15 +147,10 @@ function CareerHiringForm() {
                 <Input
                   id='address'
                   keyboardType='default'
-                  // secureTextEntry
                   required
-                  // minLength={5}
                   autoCapitalize='none'
-                  //errorText='Please enter a valid password.'
-                  //          onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  // onFocus={}
                 />
               </View>
 
@@ -195,15 +168,10 @@ function CareerHiringForm() {
                 <Input
                   id='applying'
                   keyboardType='default'
-                  // secureTextEntry
                   required
-                  // minLength={5}
                   autoCapitalize='none'
-                  //errorText='Please enter a valid password.'
-                  //          onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  // onFocus={}
                 />
               </View>
 
@@ -221,16 +189,12 @@ function CareerHiringForm() {
                 <Input
                   id='cover'
                   keyboardType='default'
-                  // secureTextEntry
                   required
                   minLength={7}
                   numberOfLines={8}
                   autoCapitalize='none'
-                  //errorText='Please enter a valid password.'
-                  //          onInputChange={inputChangeHandler}
                   initialValue=''
                   style={styles.textInput}
-                  // onFocus={}
                 />
               </View>
 
@@ -278,17 +242,6 @@ function CareerHiringForm() {
 CareerHiringForm.navigationOptions = (navData) => {
   return {
     headerTitle: 'Career Hiring Form',
-    // headerLeft: () => (
-    //   <HeaderButtons HeaderButtonComponent={HeaderButton}>
-    //     <Item
-    //       title='Menu'
-    //       iconName='ios-menu'
-    //       onPress={() => {
-    //         navData.navigation.toggleDrawer()
-    //       }}
-    //     />
-    //   </HeaderButtons>
-    // ),
   }
 }
 
@@ -304,8 +257,6 @@ var styles = StyleSheet.create({
     flex: 1,
   },
   footer: {
-    //flex: 1,
-    // paddingTop: 150,
     marginTop: 20,
     width: screenWidth / 1.04,
     backgroundColor: '#fff',
@@ -313,10 +264,8 @@ var styles = StyleSheet.create({
     padding: 20,
   },
   imageBackground: {
-    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    // resizeMode: 'stretch',
     width: '100%',
     height: height / 3,
   },

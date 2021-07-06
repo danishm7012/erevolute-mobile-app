@@ -2,7 +2,6 @@ import GetCourseFormUser from '../../model/GetCourseModel'
 
 export const DELETE_ENROLL_COURSE_DATA = 'DELETE_ENROLL_COURSE_DATA'
 export const CREATE_ENROLL_USER_COURSE = 'CREATE_ENROLL_USER_COURSE'
-// export const UPDATE_PRODUCT = 'UPDATE_PRODUCT';
 export const FETCH_ENROLL_COURSE_FORM_DATA = 'FETCH_ENROLL_COURSE_FORM_DATA'
 
 export const deleteEnrolledCourseUser = (enrollUserId) => {
@@ -22,9 +21,7 @@ export const deleteEnrolledCourseUser = (enrollUserId) => {
 
 export const fetchEnrollUserData = () => {
   return async (dispatch, getState) => {
-    // console.log(getState())
     const token = getState().auth.token
-    // any async code you want!
     try {
       const response = await fetch(
         `https://erevolute-397af-default-rtdb.firebaseio.com/enrollCourseFormUser.json?auth=${token}`
@@ -67,7 +64,6 @@ export const createEnrollCourseForm = (
   selectedValue
 ) => {
   return async (dispatch, getState) => {
-    // any async code you want!
     const token = getState().auth.token
     const response = await fetch(
       `https://erevolute-397af-default-rtdb.firebaseio.com/enrollCourseFormUser.json?auth=${token}`,
@@ -88,7 +84,6 @@ export const createEnrollCourseForm = (
     )
 
     const resData = await response.json()
-    // const errorResData = await response.json()
     console.log(resData)
     dispatch({
       type: CREATE_ENROLL_USER_COURSE,
@@ -104,15 +99,3 @@ export const createEnrollCourseForm = (
     })
   }
 }
-
-// export const updateProduct = (id, title, description, imageUrl) => {
-//   return {
-//     type: UPDATE_PRODUCT,
-//     pid: id,
-//     productData: {
-//       title,
-//       description,
-//       imageUrl
-//     }
-//   };
-// };

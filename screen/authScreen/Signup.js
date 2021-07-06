@@ -1,25 +1,19 @@
-import * as Animatable from 'react-native-animatable'
 import * as authActions from '../action/userAction'
 
 import {
   Alert,
-  Animated,
   Dimensions,
-  ImageBackground,
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native'
 import React, { useCallback, useEffect, useReducer, useState } from 'react'
 
+import Color from '../../colors/Color'
 import Input from './Input.js'
-import { Ionicons } from '@expo/vector-icons'
-import { TypingAnimation } from 'react-native-typing-animation'
 import { useDispatch } from 'react-redux'
 
 const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE'
@@ -49,57 +43,6 @@ const formReducer = (state, action) => {
 
 const SignUp = (props) => {
   const [error, setError] = useState()
-  const [typing_email, setTyping_email] = useState(false)
-  const [typing_name, setTyping_name] = useState(false)
-  const [typing_confirmPassword, setTyping_confirmPassword] = useState(false)
-  const [typing_password, setTyping_password] = useState(false)
-  const [enable, setEnable] = useState(true)
-  const animation_login = new Animated.Value(screenWidth - 40)
-  const _foucus = (value) => {
-    if (value == 'email') {
-      setTyping_email(true)
-      setTyping_name(false)
-      setTyping_confirmPassword(false)
-      setTyping_password(false)
-    } else if (value == 'name') {
-      setTyping_email(false)
-      setTyping_name(true)
-      setTyping_confirmPassword(false)
-      setTyping_password(false)
-    } else if (value == 'password') {
-      setTyping_email(false)
-      setTyping_name(false)
-      setTyping_confirmPassword(false)
-      setTyping_password(true)
-    } else {
-      setTyping_email(false)
-      setTyping_name(false)
-      setTyping_confirmPassword(true)
-      setTyping_password(false)
-    }
-  }
-
-  const _typing = () => {
-    return <TypingAnimation dotColor='#93278f' style={{ marginRight: 25 }} />
-  }
-
-  const _animation = () => {
-    Animated.timing(animation_login, {
-      toValue: 40,
-      duration: 250,
-      useNativeDriver: false,
-    }).start()
-
-    setTimeout(() => {
-      setEnable(false)
-      setTyping_email(false)
-      setTyping_name(false)
-      setTyping_confirmPassword(false)
-      setTyping_password(false)
-    }, 150)
-  }
-  const widthanim = animation_login
-
   // SignUp functions
 
   const dispatch = useDispatch()
@@ -163,7 +106,7 @@ const SignUp = (props) => {
             </Text>
             <Text
               style={{
-                color: '#34ed56',
+                color: Color.accentColour,
               }}
             >
               Sign up to continute
@@ -190,10 +133,8 @@ const SignUp = (props) => {
                 onInputChange={inputChangeHandler}
                 initialValue=''
                 style={styles.textInput}
-                onFocus={() => _foucus('name')}
                 id='username'
               />
-              {typing_name ? _typing() : null}
             </View>
             <Text
               style={[
@@ -216,9 +157,7 @@ const SignUp = (props) => {
                 onInputChange={inputChangeHandler}
                 initialValue=''
                 style={styles.textInput}
-                onFocus={() => _foucus('email')}
               />
-              {typing_email ? _typing() : null}
             </View>
 
             <Text
@@ -243,9 +182,7 @@ const SignUp = (props) => {
                 onInputChange={inputChangeHandler}
                 initialValue=''
                 style={styles.textInput}
-                onFocus={() => _foucus('password')}
               />
-              {typing_password ? _typing() : null}
             </View>
 
             <Text
@@ -270,9 +207,7 @@ const SignUp = (props) => {
                 onInputChange={inputChangeHandler}
                 initialValue=''
                 style={styles.textInput}
-                onFocus={() => _foucus('confirm password')}
               />
-              {typing_confirmPassword ? _typing() : null}
             </View>
 
             <TouchableOpacity onPress={signupHandler}>

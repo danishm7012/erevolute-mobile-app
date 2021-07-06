@@ -5,9 +5,6 @@ const initialState = {
   userId: null,
 }
 export default (state = initialState, action) => {
-  console.log('userId id :!!!', action.token)
-  console.log('token is: !!', action.userId)
-
   switch (action.type) {
     case AUTHENTICATE:
       return {
@@ -16,11 +13,7 @@ export default (state = initialState, action) => {
       }
     case LOGOUT:
       return initialState
-    // case SIGNUP:
-    //   return {
-    //     token: action.token,
-    //     userId: action.userId,
-    //   }
+
     default:
       return state
   }

@@ -1,12 +1,16 @@
 import GetCourse from '../screen/home/GetCourse'
 import Home from '../screen/home/Home'
 import HomeDetail from './../screen/home/HomeDetail'
+import LandingHomeScreen from './../screen/home/LandingHomeScreen'
 import { Platform } from 'react-native'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 
 const HomeUsStackNavigation = createStackNavigator(
   {
+    Landing_Home_Screen: {
+      screen: LandingHomeScreen,
+    },
     Home_screen: {
       screen: Home,
     },

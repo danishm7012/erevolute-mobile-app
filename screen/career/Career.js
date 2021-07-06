@@ -8,7 +8,6 @@ import {
 } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 
-import Cards from '../../component/card/Card'
 import CareerHiringForm from './CareerHiringForm'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
 import React from 'react'

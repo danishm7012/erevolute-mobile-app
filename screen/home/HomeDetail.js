@@ -124,53 +124,6 @@ const HomeDetail = (props) => {
           />
 
           <View style={{ marginTop: 10 }} />
-
-          {/*         <ProjectAddress
-            city={project.city}
-            area={project.area}
-            country={project.country}
-            county={project.county}
-            postal={project.postalcode}
-          />
-
-          <View style={{ marginTop: 25 }} />
-          <TouchableOpacity
-            activeOpacity={0.6}
-            style={{
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: '#235478',
-              paddingVertical: 17,
-            }}
-            onPress={() => {
-              props.navigation.navigate({
-                routeName: 'Project_Form',
-                params: {
-                  protitle: project.name,
-                },
-              })
-            }}
-          >
-            <View
-              style={{
-                flex: 1,
-                bottom: 0,
-                left: 0,
-                right: 0,
-              }}
-            >
-              <Text
-                style={{
-                  color: '#fff',
-                  fontSize: 18,
-                  fontFamily: 'open-sans-bold',
-                }}
-              >
-                Book Now
-              </Text>
-            </View>
-          </TouchableOpacity> */}
         </View>
       </ScrollView>
     </SafeAreaView>

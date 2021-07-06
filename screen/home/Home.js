@@ -1,10 +1,7 @@
-import { HeaderButtons, Item } from 'react-navigation-header-buttons'
-import { Text, View } from 'react-native'
-
 import Cards from '../../component/card/Card'
-import HeaderButton from '../../component/headerbutton/HeaderButton'
 import React from 'react'
 import { ScrollView } from 'react-native'
+import { View } from 'react-native'
 
 function Home(props) {
   return (
@@ -147,17 +144,6 @@ export default Home
 
 Home.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Home',
-    headerLeft: () => (
-      <HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item
-          title='Menu'
-          iconName='ios-menu'
-          onPress={() => {
-            navData.navigation.toggleDrawer()
-          }}
-        />
-      </HeaderButtons>
-    ),
+    headerTitle: 'Courses',
   }
 }

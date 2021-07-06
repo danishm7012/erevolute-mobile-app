@@ -1,4 +1,10 @@
-import { ActivityIndicator, AsyncStorage, Text, View } from 'react-native'
+import {
+  ActivityIndicator,
+  AsyncStorage,
+  LogBox,
+  Text,
+  View,
+} from 'react-native'
 import React, { useEffect } from 'react'
 
 import Color from '../../colors/Color'
@@ -6,6 +12,7 @@ import { authenticate } from '../action/userAction'
 import { useDispatch } from 'react-redux'
 
 function StartupScreen(props) {
+  LogBox.ignoreLogs(['Setting a timer for a'])
   const dispatch = useDispatch()
   useEffect(() => {
     const tryLogin = async () => {
@@ -22,7 +29,11 @@ function StartupScreen(props) {
         return
       }
       const expirationTime = expirationDate.getTime() - new Date().getTime()
-      props.navigation.navigate('appScreen')
+      if (userId === 'VPxsMc7DqKfUOfRpKLq7QrsxIbv2') {
+        props.navigation.navigate('AdminScreen')
+      } else {
+        props.navigation.navigate('appScreen')
+      }
       dispatch(authenticate(userId, token, expirationTime))
     }
     tryLogin()

@@ -14,9 +14,6 @@ import getCourseFormData from './screen/reducer/getCourseFormData'
 import userReducer from './screen/reducer/userReducer'
 
 const rootReducer = combineReducers({
-  // products: productsReducer,
-  // cart: cartReducer,
-  // orders: ordersReducer
   contactUsers: contactReducer,
   enrollUser: getCourseFormData,
   auth: userReducer,

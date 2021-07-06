@@ -19,7 +19,6 @@ import {
 } from '../action/getCourseFormData'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { ActivityIndicatorBase } from 'react-native'
 import Color from '../../colors/Color'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
 
@@ -108,13 +107,6 @@ function EnrolledCourseUserList(props) {
         }}
       >
         {usersArray.map((item, i) => {
-          //   console.log('selected value is : !! ', item.name)
-          //   console.log('selected Image is : !! ', item.phoneNum)
-          //   console.log('selected name is : !! ', item.email)
-          //   console.log('selected phoneNum is : !! ', item.address)
-          //   console.log('selected address is : !! ', item.imageURI)
-          //   console.log('selected email is : !! ', item.selectedValue)
-
           return (
             <ListItem.Swipeable
               key={i}

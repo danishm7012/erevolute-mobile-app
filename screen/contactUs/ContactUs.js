@@ -1,10 +1,7 @@
-import * as ImagePicker from 'expo-image-picker'
-
 import {
   Alert,
   Dimensions,
   Image,
-  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -16,13 +13,12 @@ import {
 } from 'react-native'
 import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import React, { useCallback, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 
 import { Button } from 'react-native-elements'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
 import SocialMediaIcon from '../../component/socialMediaIcon/SocialMediaIcon'
 import { createContactForm } from '../action/contactAction'
-import firebase from '../../firebase/config'
+import { useDispatch } from 'react-redux'
 
 const screenWidth = Dimensions.get('screen').width
 
@@ -33,11 +29,6 @@ function ContactUs() {
   const [message, setMessage] = useState('')
 
   const dispatch = useDispatch()
-  // const dbRef = firebase.firestore().collection('serviceusers')
-  // console.log('Name is : !!', name)
-  // console.log('phoneNum is : !!', phoneNum)
-  // console.log('email is : !!', email)
-  // console.log('message is : !!', message)
 
   const submitHandler = useCallback(() => {
     if (name === '' || phoneNum === '' || email === '' || message === '') {
@@ -83,8 +74,6 @@ function ContactUs() {
                   autoCapitalize='sentences'
                   autoCorrect
                   returnKeyType='next'
-                  // onEndEditing={() => console.log('onEndEditing')}
-                  // onSubmitEditing={() => console.log('onSubmitEditing')}
                 />
               </View>
 
@@ -92,14 +81,11 @@ function ContactUs() {
                 <Text style={styles.label}>PhoneNum</Text>
                 <TextInput
                   style={styles.input}
-                  // value={phoneNum}
                   onChangeText={(phoneNum) => setPhoneNum(phoneNum)}
                   keyboardType='number-pad'
                   autoCapitalize='sentences'
                   autoCorrect
                   returnKeyType='next'
-                  // onEndEditing={() => console.log('onEndEditing')}
-                  // onSubmitEditing={() => console.log('onSubmitEditing')}
                 />
               </View>
 
@@ -107,14 +93,11 @@ function ContactUs() {
                 <Text style={styles.label}>Email</Text>
                 <TextInput
                   style={styles.input}
-                  // value={email}
                   onChangeText={(email) => setEmail(email)}
                   keyboardType='email-address'
                   autoCapitalize='sentences'
                   autoCorrect
                   returnKeyType='next'
-                  // onEndEditing={() => console.log('onEndEditing')}
-                  // onSubmitEditing={() => console.log('onSubmitEditing')}
                 />
               </View>
 
@@ -122,7 +105,6 @@ function ContactUs() {
                 <Text style={styles.label}>Message</Text>
                 <TextInput
                   style={styles.input}
-                  // value={message}
                   onChangeText={(message) => setMessage(message)}
                   keyboardType='default'
                   autoCapitalize='sentences'
@@ -130,8 +112,6 @@ function ContactUs() {
                   returnKeyType='next'
                   multiline
                   numberOfLines={4}
-                  // onEndEditing={() => console.log('onEndEditing')}
-                  // onSubmitEditing={() => console.log('onSubmitEditing')}
                 />
               </View>
 
