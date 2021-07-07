@@ -3,6 +3,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 
 import AllStyle from '../../AllStyle'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 
@@ -315,16 +316,7 @@ const FAQ = (props) => {
 
 FAQ.navigationOptions = (navData) => {
   return {
-    headerTitle: () => (
-      <Image
-        source={require('../../assets/erevolutewhite.png')}
-        style={{
-          resizeMode: 'contain',
-          width: 250,
-          // height: 250,
-        }}
-      />
-    ),
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

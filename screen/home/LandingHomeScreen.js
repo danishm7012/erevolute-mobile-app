@@ -12,6 +12,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 
 import Color from '../../colors/Color'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from './../../component/headerLogo/HeaderLogo'
 import { Icon } from 'react-native-elements'
 import React from 'react'
 
@@ -52,14 +53,23 @@ const LandingHomeScreen = (props) => {
           flex: 1,
           backgroundColor: '#2e4d90',
           justifyContent: 'center',
+          alignItems: 'flex-end',
           alignSelf: 'stretch',
-          borderBottomRightRadius: 420,
+          borderBottomLeftRadius: 420,
         }}
       >
-        <View style={{ flex: 1, width: screenWidth / 1.5, paddingLeft: 20 }}>
+        <View
+          style={{
+            flex: 1,
+            // justifyContent: 'flex-end',
+            width: screenWidth / 1.5,
+            // paddingLeft: 20,
+          }}
+        >
           <Text
             style={{
               fontSize: 28,
+              // textAlign: 'right',
               color: '#fff',
               fontWeight: '700',
               paddingTop: 30,
@@ -67,7 +77,14 @@ const LandingHomeScreen = (props) => {
           >
             Erevolute Explore business world with Us !
           </Text>
-          <View style={{ flex: 1, justifyContent: 'center' }}>
+          <View
+            style={{
+              flex: 1,
+              justifyContent: 'center',
+              // marginRight: 15,
+              alignItems: 'center',
+            }}
+          >
             <TouchableOpacity
               onPress={() => props.navigation.navigate('Home_screen')}
               activeOpacity={0.3}
@@ -101,7 +118,7 @@ const LandingHomeScreen = (props) => {
 export default LandingHomeScreen
 LandingHomeScreen.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Home',
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

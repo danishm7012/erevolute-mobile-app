@@ -1,4 +1,5 @@
 import Cards from '../../component/card/Card'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native'
 import { View } from 'react-native'
@@ -144,6 +145,6 @@ export default Home
 
 Home.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Courses',
+    headerTitle: () => <HeaderLogo />,
   }
 }

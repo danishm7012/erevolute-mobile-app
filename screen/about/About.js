@@ -3,6 +3,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 
 import Color from '../../colors/Color'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native'
 import SegmentedControlTab from 'react-native-segmented-control-tab'
@@ -365,7 +366,7 @@ function AboutUs() {
 
 AboutUs.navigationOptions = (navData) => {
   return {
-    headerTitle: 'AboutUs',
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

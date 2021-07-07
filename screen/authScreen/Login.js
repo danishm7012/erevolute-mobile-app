@@ -122,6 +122,7 @@ const Login = (props) => {
             <Text
               style={{
                 color: Color.accentColour,
+                fontWeight: '700',
               }}
             >
               Sign in to continue
@@ -195,7 +196,7 @@ const Login = (props) => {
                 onPress={() => {
                   props.navigation.navigate('Sign_Up')
                 }}
-                style={{ color: 'blue' }}
+                style={{ color: Color.accentColour, fontWeight: '700' }}
               >
                 {' '}
                 Sign Up
@@ -251,7 +252,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
   },
   animation: {
-    backgroundColor: '#93278f',
+    backgroundColor: Color.accentColour,
     width: screenWidth / 1.2,
     paddingVertical: 10,
     marginTop: 20,

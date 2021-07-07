@@ -3,6 +3,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import React, { useCallback, useRef, useState } from 'react'
 
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import YoutubePlayer from 'react-native-youtube-iframe'
 
 function CourseVideos() {
@@ -259,7 +260,7 @@ function CourseVideos() {
 export default CourseVideos
 CourseVideos.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Overview',
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

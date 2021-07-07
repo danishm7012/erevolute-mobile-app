@@ -16,6 +16,7 @@ import React, { useCallback, useState } from 'react'
 
 import { Button } from 'react-native-elements'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import SocialMediaIcon from '../../component/socialMediaIcon/SocialMediaIcon'
 import { createContactForm } from '../action/contactAction'
 import { useDispatch } from 'react-redux'
@@ -156,7 +157,7 @@ function ContactUs() {
 }
 ContactUs.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Register yourself',
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

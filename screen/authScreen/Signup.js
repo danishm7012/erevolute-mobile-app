@@ -224,7 +224,7 @@ const SignUp = (props) => {
                 onPress={() => {
                   props.navigation.goBack()
                 }}
-                style={{ color: 'blue' }}
+                style={{ color: Color.accentColour }}
               >
                 {' '}
                 Sign In
@@ -283,7 +283,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
   },
   animation: {
-    backgroundColor: '#93278f',
+    backgroundColor: Color.accentColour,
     width: screenWidth / 1.2,
     paddingVertical: 10,
     marginTop: 20,

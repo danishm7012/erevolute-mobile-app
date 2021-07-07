@@ -2,6 +2,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 import { Text, View } from 'react-native'
 
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native'
 import ServicesCard from '../../component/card/ServicesCard'
@@ -214,7 +215,7 @@ export default Services
 
 Services.navigationOptions = (navData) => {
   return {
-    headerTitle: 'Services',
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item

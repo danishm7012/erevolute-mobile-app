@@ -10,6 +10,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons'
 
 import CareerHiringForm from './CareerHiringForm'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native'
 
@@ -295,7 +296,7 @@ export default Career
 
 Career.navigationOptions = (navData) => {
   return {
-    headerTitle: '',
+    headerTitle: () => <HeaderLogo />,
     headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
