@@ -79,7 +79,7 @@ function ContactUs() {
               </View>
 
               <View style={styles.formControl}>
-                <Text style={styles.label}>PhoneNum</Text>
+                <Text style={styles.label}>Phone</Text>
                 <TextInput
                   style={styles.input}
                   onChangeText={(phoneNum) => setPhoneNum(phoneNum)}
@@ -135,7 +135,7 @@ function ContactUs() {
               </View>
               <View
                 style={{
-                  paddingTop: StatusBar.currentHeight * 2.5,
+                  paddingTop: StatusBar.currentHeight,
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}
@@ -146,6 +146,9 @@ function ContactUs() {
                   linkedInSocial='https://www.linkedin.com/company/e-revolute/'
                   instagramSocial='https://www.instagram.com/erevolute/'
                   websiteSocial='https://erevolute.org/'
+                  pintrestSocial='https://www.pinterest.com/erevolute/_saved/'
+                  youtubeSocial='https://www.youtube.com/channel/UCZ1VR55aDhXP5QLhc2txziw'
+                  reditSocial='https://www.reddit.com/r/eRevolute/'
                 />
               </View>
             </View>

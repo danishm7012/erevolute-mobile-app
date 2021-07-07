@@ -129,9 +129,9 @@ function ProjectDescription({
                   ]}
                 >
                   <Ionicons
-                    name='videocam'
+                    name='chevron-forward'
                     size={25}
-                    color={Color.accentColour}
+                    color={Color.primaryColour}
                   />
                   {item}
                 </Text>
