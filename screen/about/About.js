@@ -344,6 +344,7 @@ function AboutUs() {
         )}
         <View
           style={{
+            flex: 1,
             paddingTop: StatusBar.currentHeight,
             justifyContent: 'center',
             alignItems: 'center',
