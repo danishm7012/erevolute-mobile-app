@@ -31,18 +31,35 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: HomeStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='home' size={25} color={Color.accentColour} />
+          <Ionicons name='home' size={25} color={Color.primaryColour} />
         ),
 
         drawerLabel: 'Home',
       },
     },
-
+    Course_Video: {
+      screen: CourseVideosStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons name='videocam' size={29} color={Color.primaryColour} />
+        ),
+        drawerLabel: 'Course Intro',
+      },
+    },
+    Services: {
+      screen: ServicesStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons name='ribbon-sharp' size={29} color={Color.primaryColour} />
+        ),
+        drawerLabel: 'Services',
+      },
+    },
     Schedule_Batches: {
       screen: ScheduleBatcheStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='school' size={25} color={Color.accentColour} />
+          <Ionicons name='school' size={25} color={Color.primaryColour} />
         ),
         drawerLabel: 'Schedule Batches',
       },
@@ -52,7 +69,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: ScheduleWebinarStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='megaphone' size={25} color={Color.accentColour} />
+          <Ionicons name='megaphone' size={25} color={Color.primaryColour} />
         ),
         drawerLabel: 'Schedule Webinar',
       },
@@ -61,7 +78,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: ContactUsStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='call-sharp' size={25} color={Color.accentColour} />
+          <Ionicons name='call-sharp' size={25} color={Color.primaryColour} />
         ),
         drawerLabel: 'ContactUs',
       },
@@ -74,29 +91,32 @@ const MainDrawerNavigator = createDrawerNavigator(
           <Ionicons
             name='information-circle-sharp'
             size={29}
-            color={Color.accentColour}
+            color={Color.primaryColour}
           />
         ),
         drawerLabel: 'AboutUs',
       },
     },
-
+    FAQ: {
+      screen: FAQStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons
+            name='hand-left-sharp'
+            size={29}
+            color={Color.primaryColour}
+          />
+        ),
+        drawerLabel: 'FAQs',
+      },
+    },
     Term_Condition: {
       screen: TermandConditionStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='reader-sharp' size={29} color={Color.accentColour} />
+          <Ionicons name='reader-sharp' size={29} color={Color.primaryColour} />
         ),
         drawerLabel: 'Term&Condition',
-      },
-    },
-    Course_Video: {
-      screen: CourseVideosStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name='videocam' size={29} color={Color.accentColour} />
-        ),
-        drawerLabel: 'Course Intro',
       },
     },
 
@@ -120,28 +140,6 @@ const MainDrawerNavigator = createDrawerNavigator(
     //   },
     // },
 
-    FAQ: {
-      screen: FAQStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons
-            name='hand-left-sharp'
-            size={29}
-            color={Color.accentColour}
-          />
-        ),
-        drawerLabel: 'FAQ',
-      },
-    },
-    Services: {
-      screen: ServicesStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name='ribbon-sharp' size={29} color={Color.accentColour} />
-        ),
-        drawerLabel: 'Services',
-      },
-    },
     // AUTH: {
     //   screen: AuthScreenStackNavigation,
     //   navigationOptions: {
@@ -159,7 +157,7 @@ const MainDrawerNavigator = createDrawerNavigator(
       screen: CareerStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='shield-sharp' size={29} color={Color.accentColour} />
+          <Ionicons name='shield-sharp' size={29} color={Color.primaryColour} />
         ),
         drawerLabel: 'Career',
       },
@@ -191,13 +189,16 @@ const MainDrawerNavigator = createDrawerNavigator(
             <DrawerItems {...props} />
             <Button
               title='LogOut'
+              titleStyle={{ color: '#121212' }}
               containerStyle={{ paddingVertical: 15 }}
-              buttonStyle={{ backgroundColor: Color.accentColour }}
+              buttonStyle={{
+                backgroundColor: Color.accentColour,
+              }}
               onPress={() => {
                 dispatch(logOut())
                 // props.navigation.navigate('Auth')
               }}
-              icon={<Ionicons name='log-out' size={29} color='#fff' />}
+              icon={<Ionicons name='log-out' size={29} color='#121212' />}
             />
           </SafeAreaView>
         </ScrollView>
@@ -205,8 +206,8 @@ const MainDrawerNavigator = createDrawerNavigator(
     },
     drawerBackgroundColor: Color.drawerColor,
     contentOptions: {
-      activeTintColor: Color.accentColour,
-      activeBackgroundColor: Color.primaryColour,
+      activeTintColor: Color.primaryColour,
+      activeBackgroundColor: Color.accentColour,
       inactiveTintColor: '#808080',
       itemsContainerStyle: {
         marginVertical: 30,
@@ -228,10 +229,28 @@ const AdminDrawerNavigator = createDrawerNavigator(
       screen: HomeStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='home' size={25} color={Color.accentColour} />
+          <Ionicons name='home' size={25} color={Color.primaryColour} />
         ),
 
         drawerLabel: 'Home',
+      },
+    },
+    Course_Video: {
+      screen: CourseVideosStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons name='videocam' size={29} color={Color.primaryColour} />
+        ),
+        drawerLabel: 'Course Intro',
+      },
+    },
+    Services: {
+      screen: ServicesStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons name='ribbon-sharp' size={29} color={Color.primaryColour} />
+        ),
+        drawerLabel: 'Services',
       },
     },
 
@@ -239,7 +258,7 @@ const AdminDrawerNavigator = createDrawerNavigator(
       screen: ScheduleBatcheStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='school' size={25} color={Color.accentColour} />
+          <Ionicons name='school' size={25} color={Color.primaryColour} />
         ),
         drawerLabel: 'Schedule Batches',
       },
@@ -249,16 +268,40 @@ const AdminDrawerNavigator = createDrawerNavigator(
       screen: ScheduleWebinarStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='megaphone' size={25} color={Color.accentColour} />
+          <Ionicons name='megaphone' size={25} color={Color.primaryColour} />
         ),
         drawerLabel: 'Schedule Webinar',
       },
     },
+    User_ScreenContactFormData: {
+      screen: UserScreenStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons
+            name='people-circle'
+            size={29}
+            color={Color.primaryColour}
+          />
+        ),
+        drawerLabel: 'User List',
+      },
+    },
+
+    Enroll_User_List: {
+      screen: EnrollCourseUserListStackNavigation,
+      navigationOptions: {
+        drawerIcon: () => (
+          <Ionicons name='people' size={29} color={Color.primaryColour} />
+        ),
+        drawerLabel: 'Enroll Students',
+      },
+    },
+
     ContactUs: {
       screen: ContactUsStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='call-sharp' size={25} color={Color.accentColour} />
+          <Ionicons name='call-sharp' size={25} color={Color.primaryColour} />
         ),
         drawerLabel: 'ContactUs',
       },
@@ -271,49 +314,10 @@ const AdminDrawerNavigator = createDrawerNavigator(
           <Ionicons
             name='information-circle-sharp'
             size={29}
-            color={Color.accentColour}
+            color={Color.primaryColour}
           />
         ),
         drawerLabel: 'AboutUs',
-      },
-    },
-
-    Term_Condition: {
-      screen: TermandConditionStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name='reader-sharp' size={29} color={Color.accentColour} />
-        ),
-        drawerLabel: 'Term&Condition',
-      },
-    },
-    Course_Video: {
-      screen: CourseVideosStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name='videocam' size={29} color={Color.accentColour} />
-        ),
-        drawerLabel: 'Course Intro',
-      },
-    },
-
-    User_ScreenContactFormData: {
-      screen: UserScreenStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name='people-circle' size={29} color={Color.accentColour} />
-        ),
-        drawerLabel: 'User List',
-      },
-    },
-
-    Enroll_User_List: {
-      screen: EnrollCourseUserListStackNavigation,
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name='people' size={29} color={Color.accentColour} />
-        ),
-        drawerLabel: 'Enroll Students',
       },
     },
 
@@ -324,21 +328,23 @@ const AdminDrawerNavigator = createDrawerNavigator(
           <Ionicons
             name='hand-left-sharp'
             size={29}
-            color={Color.accentColour}
+            color={Color.primaryColour}
           />
         ),
-        drawerLabel: 'FAQ',
+        drawerLabel: 'FAQs',
       },
     },
-    Services: {
-      screen: ServicesStackNavigation,
+
+    Term_Condition: {
+      screen: TermandConditionStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='ribbon-sharp' size={29} color={Color.accentColour} />
+          <Ionicons name='reader-sharp' size={29} color={Color.primaryColour} />
         ),
-        drawerLabel: 'Services',
+        drawerLabel: 'Term&Condition',
       },
     },
+
     // AUTH: {
     //   screen: AuthScreenStackNavigation,
     //   navigationOptions: {
@@ -346,7 +352,7 @@ const AdminDrawerNavigator = createDrawerNavigator(
     //       <Ionicons
     //         name='hand-left-sharp'
     //         size={29}
-    //         color={Color.accentColour}
+    //         color={Color.primaryColor}
     //       />
     //     ),
     //     drawerLabel: 'SignUp',
@@ -356,7 +362,7 @@ const AdminDrawerNavigator = createDrawerNavigator(
       screen: CareerStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='shield-sharp' size={29} color={Color.accentColour} />
+          <Ionicons name='shield-sharp' size={29} color={Color.primaryColour} />
         ),
         drawerLabel: 'Career',
       },
@@ -388,13 +394,14 @@ const AdminDrawerNavigator = createDrawerNavigator(
             <DrawerItems {...props} />
             <Button
               title='LogOut'
+              titleStyle={{ color: '#121212' }}
               containerStyle={{ paddingVertical: 15 }}
               buttonStyle={{ backgroundColor: Color.accentColour }}
               onPress={() => {
                 dispatch(logOut())
                 // props.navigation.navigate('Auth')
               }}
-              icon={<Ionicons name='log-out' size={29} color='#fff' />}
+              icon={<Ionicons name='log-out' size={29} color='#121212' />}
             />
           </SafeAreaView>
         </ScrollView>
@@ -402,8 +409,8 @@ const AdminDrawerNavigator = createDrawerNavigator(
     },
     drawerBackgroundColor: Color.drawerColor,
     contentOptions: {
-      activeTintColor: Color.accentColour,
-      activeBackgroundColor: Color.primaryColour,
+      activeTintColor: Color.primaryColour,
+      activeBackgroundColor: Color.accentColour,
       inactiveTintColor: '#808080',
       itemsContainerStyle: {
         marginVertical: 30,

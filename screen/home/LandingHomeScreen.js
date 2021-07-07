@@ -48,6 +48,7 @@ const LandingHomeScreen = (props) => {
           }}
         />
       </View>
+
       <View
         style={{
           flex: 1,
@@ -61,7 +62,7 @@ const LandingHomeScreen = (props) => {
         <View
           style={{
             flex: 1,
-            // justifyContent: 'flex-end',
+
             width: screenWidth / 1.5,
             // paddingLeft: 20,
           }}

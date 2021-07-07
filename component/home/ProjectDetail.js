@@ -1,26 +1,43 @@
-import { Dimensions, Image, Text, View } from 'react-native'
+import { Dimensions, Image, Pressable, Text, View } from 'react-native'
 
 import AllStyle from '../../AllStyle.js'
+import { Asset } from 'expo-asset'
+import Color from '../../colors/Color.js'
+import ImageView from 'react-native-image-viewing'
 import { Ionicons } from '@expo/vector-icons'
 import React from 'react'
 
 let { width: screenWidth, height: screenHeight } = Dimensions.get('window')
 
-function ProjectDetailHeader({ headerimage, address, title }) {
+function ProjectDetailHeader({ headerimage, title }) {
+  const images = [
+    {
+      uri: Asset.fromModule(headerimage).uri,
+    },
+  ]
+  const [visible, setIsVisible] = React.useState(false)
   return (
     <View style={{ flex: 1 }}>
       <View style={AllStyle.aboutSwiper}>
         {/* <SwiperComponent /> */}
-        <Image
-          style={{
-            resizeMode: 'stretch',
-            height: screenHeight / 2.5,
-            width: screenWidth,
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          source={headerimage}
+        <ImageView
+          images={images}
+          imageIndex={0}
+          visible={visible}
+          onRequestClose={() => setIsVisible(false)}
         />
+        <Pressable onPress={() => setIsVisible(true)}>
+          <Image
+            style={{
+              resizeMode: 'stretch',
+              height: screenHeight / 2.5,
+              width: screenWidth,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            source={headerimage}
+          />
+        </Pressable>
       </View>
       <View
         style={{
@@ -63,7 +80,7 @@ function ProjectDetailHeader({ headerimage, address, title }) {
               <Ionicons
                 name='albums-outline'
                 size={35}
-                color='#00aeff'
+                color={Color.primaryColour}
                 style={{ marginTop: 8 }}
               />
               {title}

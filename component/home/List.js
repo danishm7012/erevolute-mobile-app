@@ -65,9 +65,9 @@ function List({ heading, detail }) {
                   key={index}
                 >
                   <Ionicons
-                    name='videocam'
+                    name='chevron-forward'
                     size={25}
-                    color={Color.accentColour}
+                    color={Color.primaryColour}
                   />
                   {fea}
                 </Text>

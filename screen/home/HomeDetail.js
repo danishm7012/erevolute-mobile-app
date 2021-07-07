@@ -34,11 +34,7 @@ const HomeDetail = (props) => {
     >
       <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1 }}>
-          <ProjectDetail
-            headerimage={courseImage}
-            address='Awais'
-            title={courseTitle}
-          />
+          <ProjectDetail headerimage={courseImage} title={courseTitle} />
           <View style={{ marginBottom: 15 }} />
           <PricingCard
             color={Color.accentColour}

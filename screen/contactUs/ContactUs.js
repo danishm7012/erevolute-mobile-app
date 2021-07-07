@@ -79,7 +79,7 @@ function ContactUs() {
               </View>
 
               <View style={styles.formControl}>
-                <Text style={styles.label}>PhoneNum</Text>
+                <Text style={styles.label}>Phone</Text>
                 <TextInput
                   style={styles.input}
                   onChangeText={(phoneNum) => setPhoneNum(phoneNum)}

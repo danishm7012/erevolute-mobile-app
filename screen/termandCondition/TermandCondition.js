@@ -140,7 +140,7 @@ function TermandCondition() {
           >
             We use the information we collect in various ways, including to:
           </Text>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
@@ -153,7 +153,7 @@ function TermandCondition() {
               Provide, operate, and maintain our website
             </Text>
           </Unorderedlist>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
@@ -166,7 +166,7 @@ function TermandCondition() {
               Improve, personalize, and expand our website
             </Text>
           </Unorderedlist>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
@@ -179,7 +179,7 @@ function TermandCondition() {
               Understand and analyze how you use our website:
             </Text>
           </Unorderedlist>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
@@ -192,7 +192,7 @@ function TermandCondition() {
               Develop new products, services, features, and functionality:
             </Text>
           </Unorderedlist>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
@@ -208,7 +208,7 @@ function TermandCondition() {
               marketing and promotional purposes
             </Text>
           </Unorderedlist>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
@@ -221,7 +221,7 @@ function TermandCondition() {
               Send you emails
             </Text>
           </Unorderedlist>
-          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2765}>
+          <Unorderedlist style={{ marginLeft: 10 }} bulletUnicode={0x2022}>
             <Text
               style={{
                 fontSize: 14,
