@@ -22,6 +22,7 @@ function Services(props) {
               params: {
                 serId: '1',
                 heading: 'Amazon Account Management',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Amazon-Account-Management.jpg'),
               },
             })
           }}
@@ -37,6 +38,7 @@ function Services(props) {
               params: {
                 serId: '2',
                 heading: 'eRevolute Investment Consortium',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/eRevolute-Investment-Consortium.jpg'),
               },
             })
           }}
@@ -52,6 +54,7 @@ function Services(props) {
               params: {
                 serId: '3',
                 heading: 'eRevolute Opportunity Club',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/eRevolute-Opportunity-Club.jpg'),
               },
             })
           }}
@@ -67,6 +70,7 @@ function Services(props) {
               params: {
                 serId: '4',
                 heading: 'Digital Marketing',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Digital-Marketing.jpg'),
               },
             })
           }}
@@ -82,6 +86,7 @@ function Services(props) {
               params: {
                 serId: '5',
                 heading: 'Ecommerce Store Development',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Ecommerce-Store-Development.jpg'),
               },
             })
           }}
@@ -97,6 +102,7 @@ function Services(props) {
               params: {
                 serId: '6',
                 heading: 'Amazon Account Rescue',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Amazon-Account-Rescue.jpg'),
               },
             })
           }}
@@ -112,6 +118,7 @@ function Services(props) {
               params: {
                 serId: '7',
                 heading: 'eRevolute Mentor Support',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Mentor-Support.jpg'),
               },
             })
           }}
@@ -127,6 +134,7 @@ function Services(props) {
               params: {
                 serId: '8',
                 heading: 'Product Hunting',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Product-Hunting.jpg'),
               },
             })
           }}
@@ -142,6 +150,7 @@ function Services(props) {
               params: {
                 serId: '9',
                 heading: 'Product Launching',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Product-Launching.jpg'),
               },
             })
           }}
@@ -157,6 +166,7 @@ function Services(props) {
               params: {
                 serId: '10',
                 heading: 'Product Photography & Designing',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Product-Photography-Designing.jpg'),
               },
             })
           }}
@@ -172,6 +182,7 @@ function Services(props) {
               params: {
                 serId: '11',
                 heading: 'Listing Optimization',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Listing-Optimization.jpg'),
               },
             })
           }}
@@ -187,6 +198,7 @@ function Services(props) {
               params: {
                 serId: '12',
                 heading: 'PPC Campaigns',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/PPC-Campaigns.jpg'),
               },
             })
           }}
@@ -202,6 +214,7 @@ function Services(props) {
               params: {
                 serId: '13',
                 heading: 'Content Writing',
+                serImg: require('../../assets/eREVOLUTEServicesBanner/Content-Writing.jpg'),
               },
             })
           }}

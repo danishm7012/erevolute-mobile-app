@@ -11,6 +11,7 @@ let { width: screenWidth, height: screenHeight } = Dimensions.get('window')
 
 const ServicesDetail = (props) => {
   const serviceid = props.navigation.getParam('serId')
+  const serviceImage = props.navigation.getParam('serImg')
   const serviceTitle = props.navigation.getParam('heading')
   const serviceDetails = ServiceDetail.find(
     (service) => service.id === serviceid
@@ -26,7 +27,7 @@ const ServicesDetail = (props) => {
       <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1 }}>
           <ProjectDetail
-            headerimage={require('../../assets/career/career.jpg')}
+            headerimage={serviceImage}
             address='Awais'
             title={serviceTitle}
           />

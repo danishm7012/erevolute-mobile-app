@@ -344,10 +344,8 @@ function AboutUs() {
         )}
         <View
           style={{
-            paddingTop: StatusBar.currentHeight * 2.2,
+            paddingTop: StatusBar.currentHeight,
             justifyContent: 'center',
-            backgroundColor: '#fff',
-            elevation: 40,
             alignItems: 'center',
           }}
         >
@@ -357,6 +355,9 @@ function AboutUs() {
             linkedInSocial='https://www.linkedin.com/company/e-revolute/'
             instagramSocial='https://www.instagram.com/erevolute/'
             websiteSocial='https://erevolute.org/'
+            pintrestSocial='https://www.pinterest.com/erevolute/_saved/'
+            youtubeSocial='https://www.youtube.com/channel/UCZ1VR55aDhXP5QLhc2txziw'
+            reditSocial='https://www.reddit.com/r/eRevolute/'
           />
         </View>
       </View>
