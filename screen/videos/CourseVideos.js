@@ -82,6 +82,30 @@ function CourseVideos() {
         >
           <YoutubePlayer
             height={215}
+            play={playingsecond}
+            videoId={'c8Es8vozZ1E'}
+            onChangeState={onStateChangesecond}
+          />
+          <View
+            style={{
+              flex: 1,
+              paddingBottom: 50,
+              justifyContent: 'flex-start',
+              alignItems: 'flex-start',
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 20,
+                paddingHorizontal: 10,
+                fontFamily: 'open-sans-bold',
+              }}
+            >
+              Introduction | eRevolute - Where Revolution Emerge
+            </Text>
+          </View>
+          <YoutubePlayer
+            height={215}
             play={playing}
             videoId={'aUz1NO7L8E4'}
             onChangeState={onStateChange}
@@ -105,30 +129,6 @@ function CourseVideos() {
             </Text>
           </View>
 
-          <YoutubePlayer
-            height={215}
-            play={playingsecond}
-            videoId={'c8Es8vozZ1E'}
-            onChangeState={onStateChangesecond}
-          />
-          <View
-            style={{
-              flex: 1,
-              paddingBottom: 50,
-              justifyContent: 'flex-start',
-              alignItems: 'flex-start',
-            }}
-          >
-            <Text
-              style={{
-                fontSize: 20,
-                paddingHorizontal: 10,
-                fontFamily: 'open-sans-bold',
-              }}
-            >
-              Introduction | eRevolute - Where Revolution Emerge
-            </Text>
-          </View>
           <YoutubePlayer
             height={215}
             play={playingthird}

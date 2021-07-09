@@ -5,6 +5,7 @@ import {
   Alert,
   AsyncStorage,
   Dimensions,
+  Image,
   LogBox,
   SafeAreaView,
   ScrollView,
@@ -21,6 +22,7 @@ import Input from './Input.js'
 
 const FORM_INPUT_UPDATE = 'FORM_INPUT_UPDATE'
 const screenWidth = Dimensions.get('screen').width
+const screenHeight = Dimensions.get('screen').height
 
 const formReducer = (state, action) => {
   if (action.type === FORM_INPUT_UPDATE) {
@@ -109,12 +111,29 @@ const Login = (props) => {
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
         <View style={styles.container}>
+          <View
+            style={{
+              width: screenWidth / 2.5,
+              justifyContent: 'flex-start',
+              height: screenHeight / 6,
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              style={{
+                resizeMode: 'stretch',
+                width: screenWidth / 1.3,
+                height: screenHeight / 3,
+              }}
+              source={require('../../assets/erevolute.png')}
+            />
+          </View>
           <View style={styles.header}>
             <Text
               style={{
                 color: '#121212',
                 fontWeight: 'bold',
-                fontSize: 30,
+                fontSize: 25,
               }}
             >
               Welcome Back
@@ -219,7 +238,7 @@ var styles = StyleSheet.create({
     alignItems: 'center',
   },
   header: {
-    height: height / 3.5,
+    height: height / 7,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -252,7 +271,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
   },
   animation: {
-    backgroundColor: Color.accentColour,
+    backgroundColor: Color.primaryColour,
     width: screenWidth / 1.2,
     paddingVertical: 10,
     marginTop: 20,

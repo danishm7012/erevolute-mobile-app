@@ -7,7 +7,6 @@ import AppLoading from 'expo-app-loading'
 import NavigationContainer from './navigation/NavigationContainer'
 import { Provider } from 'react-redux'
 import ReduxThunk from 'redux-thunk'
-import { StatusBar } from 'expo-status-bar'
 import contactReducer from './screen/reducer/contactReducer'
 import { enableScreens } from 'react-native-screens'
 import getCourseFormData from './screen/reducer/getCourseFormData'
@@ -35,18 +34,11 @@ export default function App() {
 
   if (!fontloaded) {
     return (
-      <>
-        <StatusBar
-          backgroundColor='#61dafb'
-          barStyle='dark-content'
-          hidden={true}
-        />
-        <AppLoading
-          startAsync={fetchFonts}
-          onFinish={() => setfontloaded(true)}
-          onError={console.err}
-        />
-      </>
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setfontloaded(true)}
+        onError={console.err}
+      />
     )
   }
   return (

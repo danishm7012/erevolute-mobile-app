@@ -1,5 +1,7 @@
 // screens/EnrolledCourseUserList.js
 
+import * as firebase from 'firebase'
+
 import {
   ActivityIndicator,
   Alert,
@@ -21,11 +23,15 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import Color from '../../colors/Color'
 import HeaderButton from '../../component/headerbutton/HeaderButton'
+import { firebaseConfig } from '../../firebase/config'
 
 const screenWidth = Dimensions.get('screen').width
 const screenHeight = Dimensions.get('screen').height
 
 function EnrolledCourseUserList(props) {
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig)
+  }
   const [error, setError] = useState()
   const [isLoading, setIsloading] = useState(false)
   const dispatch = useDispatch()
@@ -130,7 +136,7 @@ function EnrolledCourseUserList(props) {
                   title='Delete'
                   icon={{ name: 'delete', color: 'white' }}
                   buttonStyle={{ minHeight: '100%', backgroundColor: 'red' }}
-                  onPress={deleteHandler.bind(this, item.id)}
+                  onPress={deleteHandler.bind(this, item.id, item.imageURI)}
                 />
               }
             >

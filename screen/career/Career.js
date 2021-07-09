@@ -95,28 +95,7 @@ function Career(props) {
                 height: screenHeight / 4,
                 resizeMode: 'stretch',
               }}
-            >
-              <View
-                style={{
-                  width: screenWidth,
-                  height: screenHeight / 4,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    fontFamily: 'open-sans-bold',
-                    color: '#fff',
-                    fontSize: 24,
-                    fontWeight: '700',
-                  }}
-                >
-                  Career
-                </Text>
-              </View>
-            </ImageBackground>
+            ></ImageBackground>
           </View>
         </View>
         <ImageView

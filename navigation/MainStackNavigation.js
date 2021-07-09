@@ -181,7 +181,7 @@ const MainDrawerNavigator = createDrawerNavigator(
             >
               <View style={styles.drawerLogo}>
                 <Image
-                  style={{ flex: 1, width: '80%', resizeMode: 'contain' }}
+                  style={{ height: 170, width: '80%', resizeMode: 'stretch' }}
                   source={require('../assets/erevolute.png')}
                 />
               </View>
@@ -386,7 +386,7 @@ const AdminDrawerNavigator = createDrawerNavigator(
             >
               <View style={styles.drawerLogo}>
                 <Image
-                  style={{ flex: 1, width: '80%', resizeMode: 'contain' }}
+                  style={{ height: 170, width: '80%', resizeMode: 'stretch' }}
                   source={require('../assets/erevolute.png')}
                 />
               </View>
