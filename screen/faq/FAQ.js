@@ -39,273 +39,310 @@ const FAQ = (props) => {
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What is the minimum subscription for eRevolute? 
+              What is Product selling on Amazon? 
             </Text>
           </View>
 
           <View style={{ margin: 5 }}>
             <Text style={AllStyle.Aboutdetail}>
-              We offer a minimum 2 Months subscription. However, eRevolute
-              offers an unlimited time offer to go with us
+              Product Selling on Amazon is a method that allows both amazon
+              expert and online businesses to sell their goods plus history on
+              Amazon. 
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Why should I work from eRevolute and not from home? 
+              Why do we need to sell a product on Amazon by this course? 
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={AllStyle.Aboutdetail}>
-              Most commonly, it is a fact; businesses should be run through
-              offices. Because in Home you don’t find the appropriate
-              environment for working. Many things can distract you. Moreover,
-              you don’t have the fellows and like-minded people there at Home.
-              So, for this reason, you should work from eRevolute to enhance
-              your performance and make the best use of your potential.  
+              Here are only some of the causes: opportunity to establish your
+              local product in front of millions of potential buyers, plus the
+              capability to start stock selling quick before you even
+              established up a company website or physical street store.  
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What Facilities are Provided there at eRevolute? 
+              Can I register my goods in Amazon all categories after Amazon
+              Course? 
             </Text>
           </View>
 
           <View style={{ margin: 5 }}>
             <Text style={AllStyle.Aboutdetail}>
-              We eRevolute provides a conducive environment for both investors
-              and experts to discuss progressive ideas. It takes several weeks
-              or months to deliver you quality, result-oriented outcomes. For
-              this reason, we offer a comfy ambiance for our clients while
-              working with us. We provide the following noticeable amenities in
-              our office. High-Speed Broadband Internet Air Conditioned Building
-              Fast Printers Kitchen along with Appliances (Fridge, MW Oven)
-              Comfortable and Elegant Furniture Distraction-Free Discussion Room
+              Approval must be required to list specific products in specific
+              categories. Mark out the amazon Sell page for more knowledge.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Can I get a Refund from eRevolute?
+              What kind of goods cannot be listed on Amazon?
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              Yes! You can get a 100% claim refund within seven days following
-              your admission to the eRevolute. We do not bind you in a
-              restrictive bond. It is your right, and we are ready to offer you
-              always.  
+              Some goods may not be listed on Amazon due to compliance with fair
+              or administrative restrictions (Like medicine, drugs, etc.) or
+              Amazon management (crime scene photos).   
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Can I get a Disscount Voucher? 
+              What is the Amazon Guarantee Selling Course? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              For Sure, we offer a discount to our valued clients. Our discount
-              offers cover a Six-Month and Annual subscription. We give a 20%
-              Discount for Six Month Subscription and a 15% Flat discount for
-              the yearly subscription. 
+              Amazon Guarantee Selling program has produced countless satisfied
+              buyers by being responsive to their interests and acting fast to
+              solve queries. eRevolute extend this important client trust to
+              retailers through the Guarantee product selling program. 
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Can I Book erevolute part time? 
+              Can I use my existing account in Amazon Course to sell in the US,
+              UK, and other Countries? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              Yes! eRevolute has designed its office decorum keeping in view the
-              possible situations of the clients. We offer this facility to
-              those who can’t come to us at certain hours. Please contact at +92
-              300 0807124 for further details. 
+              Yes, use your existing Amazon account to sell products in all
+              mention countries except that Amazon is not allowed. 
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Is there any other charged involved? 
+              Can I depreciate my Expert selling account? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              No! We believe in plain words policy. There are no hidden or extra
-              charges you have to pay anytime and for anything.
+              Yes. Suppose you don't need to be charged a regular subscription
+              fee. In that case, you can depreciate your account from the expert
+              plan to the Personal method from the My Services page in Amazon
+              Seller Central.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Is there any security deposite?
+              Can I close my Amazon seller account anytime?
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              No, we do not get any security deposit. You only need to pay just
-              the subscription fee.
+              You can eliminate your amazon subscription at any time. However,
+              there is never a long-term promise wanted to continue. To forever
+              close your Amazon seller account, must request the account closing
+              in Seller Central. Keep in thought that you can practice our
+              Listings feature to discontinue your amazon product listings, or
+              you can eliminate them but hold on to your record for later use.
+              Before you terminate your amazon account permanently, remember to
+              close and delete your product listings and solve all purchases.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Is the Amazon Merchandising Legal?
+              How much cost Amazon Charge to sell a product on Amazon?
             </Text>
           </View>
 
           <View style={{ margin: 5 }}>
             <Text style={AllStyle.Aboutdetail}>
-              Yes, obviously, Amazon trading is legal in Pakistan. The majority
-              of the people from the business community are doing trading on
-              Amazon from Pakistan.  
+              Amazon allows two business selling methods. The Professional
+              selling method is possible for $50 per month plus a charge on each
+              sold product. If you plan to sell less than 50 articles a month,
+              the Private program may be most suitable for you. There is no
+              regular subscription charge.  What are the differences between
+              Amazon Professional and Amazon Personal accounts? 3rd-party Amazon
+              sellers can trade in Amazon's registered stores by the
+              Professional Amazon program and individuals. In an Individual
+              Amazon policy, amazon sellers spend a fee for each product they
+              sell. Amazon sellers pay one flat fee per month with the
+              Professional Amazon plan, no matter how many units they sell.
+              Sellers with the Professional program can also access advanced
+              selling tools such as APIs and Amazon Marketplace Web Service
+              (AWS) reports  
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What are the trading models for Amazon? 
+              How do I get paid from Amazon? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              There are many models for trading through Amazon. But FBA,
-              Affiliated Marketing, and Amazon Vendor/Seller Models are widely
-              used. These are also best for Pakistani entrepreneurs and people
-              in business.
+              When your seller's Amazon account is verified, and you have a
+              payable balance, Amazon will send the funds to your provided bank
+              account using a Computerized Clearance funds transfer. It will
+              take up to 5 working days for the funds to arrive in your bank
+              account after Amazon admits an amount.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Are Amazon Trading activities Halal? 
+              How do I manage my Amazon selling account for payment
+              transactions? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              Yes, undoubtedly, all of the trading activities of Halal products
-              are purely Halal. These are just like any other lawful business. A
-              good number of Pakistanis are already doing.
+              By Amazon Seller Account Central How will I recognize when I own
+              an Amazon sale? Amazon informs by email or text message on your
+              mobile when you experience an order. You can select the
+              notification method in your amazon account settings.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Is my working with erevolute safe? 
+              How much cost to ship the product I sell on Amazon? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              Why not? It is totally safe because we are registered and licensed
-              by all the concerned Govt of Pakistan’s authorities. In Pakistan,
-              we are registered as a legal consultancy agency in the United
-              Kingdom (UK).
+              Order Shipping charges depend on whether you intend to complete
+              buying or use FBA to manage your client service.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Will my case or working be confidiential?  
+              How does FBA work?  
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              Yes, we believe in the essential confidentiality of every client
-              with us. We do not share any of case matters or your purpose. Our
-              privacy policy is strongly client-centric.
+              FBA, you stock your goods in Amazon's fulfillment centers, and we
+              give client service for certain goods.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What are Data Policies? 
+              Can you provide me a list of Amazon Stores? 
+            </Text>
+          </View>
+
+          <View style={{ margin: 2 }}>
+            <Text style={AllStyle.Aboutdetail}>United States</Text>
+            <Text style={AllStyle.Aboutdetail}>Canada and Mexico</Text>
+            <Text style={AllStyle.Aboutdetail}>European stores </Text>
+            <Text style={AllStyle.Aboutdetail}>United Kingdom</Text>
+            <Text style={AllStyle.Aboutdetail}>Germany</Text>
+            <Text style={AllStyle.Aboutdetail}>France</Text>
+            <Text style={AllStyle.Aboutdetail}>Italy</Text>
+            <Text style={AllStyle.Aboutdetail}>Netherlands,</Text>
+            <Text style={AllStyle.Aboutdetail}>Poland</Text>
+            <Text style={AllStyle.Aboutdetail}>Spain</Text>
+            <Text style={AllStyle.Aboutdetail}>Sweden</Text>
+            <Text style={AllStyle.Aboutdetail}>Japan</Text>
+            <Text style={AllStyle.Aboutdetail}>Australia</Text>
+          </View>
+
+          <View style={{}}>
+            <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
+              Can I Get a Job after Amazon Course Certification? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              We do not share your data with anyone else. All of your
-              credentials and data deposits with us are safe and unshared. We do
-              not sell our data. However, we keep it with us to help you with
-              more result-oriented tips ahead in the future. You can count on us
-              for your business data.
+              At eRevolute 100% Job availability for our first 1000 students who
+              pass the amazon practice sessions.
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What parameters does erevolute take during pandemic? 
+              Can I open a new Amazon seller account during the course
+              practice? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              eRevolute stringently follows all of the SOPs and precautionary
-              measurements in COVID-19 widespread. Hand sanitizer, face mask,
-              and social distancing are followed while in the office. Proper
-              cleaning, disinfecting, and keeping the office airy are also in
-              our parameters to stand secure against the virus..
+              Tour the Pricing page to register for the Expert plan or the
+              Personal plan. You can use your Amazon consumer or seller account
+              or create a new amazon seller account with your company email
+              address. For a Customer selling account, you must need the
+              following information available: • Your company or business name,
+              business address, and business contact information • A globally
+              liable credit card with a correct billing address • A cell phone
+              number where you must get message for the verification during the
+              registration method • Your business tax ID info Further
+              identification documents may be compulsory in some cases
             </Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. Does erevolute offer Mentor Support? 
+              How long does Digital Marketing Course take? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
-            <Text style={AllStyle.Aboutdetail}>
-              Yes, eRevolute offers mentor support to those entrepreneurs who do
-              not have much clear exposure to e-Business. We also standby you in
-              the whole procedure of your start-up with the online business
-              venture. That is how we stand out to position ourselves in an
-              appreciative circle.
-            </Text>
+            <Text style={AllStyle.Aboutdetail}>12 Weeks</Text>
           </View>
 
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What services does erevolute provide for e-commerce 
+              Can I start a social media campaign for my business after digital
+              marketing course? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              eRevolute serves Pakistani and international business people and
-              entrepreneurs with a broad scope of eCommerce services. We are a
-              dedicated tandem institute for both training courses and services
-              for online trading. Especially, our services for Amazon business
-              activities are unmatchable in Pakistan. You can read our range of
-              services in detail on the concerned web pages.
+              Yes, you will learn all about social media campaigns to run
+              professionally.
             </Text>
           </View>
-
           <View style={{}}>
             <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
-              Q. What are the institute of erevolute in Pakistan? 
+              Can I drive online traffic to my website with the digital
+              marketing Course? 
             </Text>
           </View>
 
           <View style={{ margin: 2 }}>
             <Text style={AllStyle.Aboutdetail}>
-              eRevolute has a network of institutes in major cities of Pakistan.
-              Currently, we have campuses in Islamabad, Lahore, Faisalabad,
-              Karachi, and Hyderabad. Our Offices in Hyderabad and Karachi are
-              soon to be open.
+              Yes, during the course lectures, you will practice driving traffic
+              for any website.
+            </Text>
+          </View>
+          <View style={{}}>
+            <Text style={[{ fontSize: 14 }, AllStyle.Aboutheading]}>
+              Why do I need different digital marketing strategies? 
+            </Text>
+          </View>
+
+          <View style={{ margin: 2 }}>
+            <Text style={AllStyle.Aboutdetail}>
+              Because this is a basic rule of digital marketing to make
+              different strategies to identify leads.
             </Text>
           </View>
         </View>

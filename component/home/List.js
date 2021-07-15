@@ -48,6 +48,7 @@ function List({ heading, detail }) {
                 justifyContent: 'center',
                 alignItems: 'flex-start',
                 marginLeft: 20,
+                marginRight: 20,
                 marginTop: 20,
               }}
             >
@@ -55,7 +56,8 @@ function List({ heading, detail }) {
                 <Text
                   style={[
                     {
-                      marginRight: 8,
+                      paddingLeft: 8,
+                      paddingRight: 15,
                       flexBasis: 360,
                       fontSize: 20,
                       marginBottom: 9,

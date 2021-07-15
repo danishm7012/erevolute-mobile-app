@@ -53,72 +53,13 @@ const HomeDetail = (props) => {
           />
 
           <View style={{ marginTop: 15 }} />
-          <View
-            style={{
-              flex: 1,
-              justifyContent: 'center',
-              elevation: 40,
-              alignItems: 'center',
-            }}
-          >
-            <View
-              style={{
-                width: screenWidth / 1.04,
-                flexGrow: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: '#fff',
-                paddingVertical: 10,
-              }}
-            >
-              <Text
-                style={{
-                  fontSize: 22,
-                  fontFamily: 'open-sans-bold',
-                  color: '#444',
-                }}
-              >
-                What you Learnt in this Course
-              </Text>
-            </View>
-          </View>
-          <View style={{ marginTop: 15 }} />
 
           <CoursePreview
             featuresArray={courseDetails.list1}
             productHunting={courseDetails.list2}
-            categoryAprovel={courseDetails.list3}
-            productSourcing={courseDetails.list4}
-            supplierVerification={courseDetails.list5}
-            samplingOrdering={courseDetails.list6}
-            costProfit={courseDetails.list7}
-            KeywordHunting={courseDetails.list8}
-            competitorAnalysis={courseDetails.list9}
-            upcPurchasing={courseDetails.list10}
-            listingCreation={courseDetails.list11}
-            shipmentCreation={courseDetails.list12}
-            productlaunching={courseDetails.list13}
-            socialmedia={courseDetails.list14}
-            handleAccount={courseDetails.list15}
-            registerBrand={courseDetails.list16}
-          />
-          <View style={{ marginTop: 10 }} />
-
-          <ProjectDescription
-            heading={courseDetails.heading1}
-            description={courseDetails.description1}
+            heading1={courseDetails.heading1}
             heading2={courseDetails.heading2}
-            description2={courseDetails.description2}
-            heading3={courseDetails.heading3}
-            description3={courseDetails.description3}
-            heading4={courseDetails.heading4}
-            description4={courseDetails.description4}
-            heading5={courseDetails.heading5}
-            description5={courseDetails.description5}
-            heading6={courseDetails.heading6}
-            description6={courseDetails.description6}
           />
-
           <View style={{ marginTop: 10 }} />
         </View>
       </ScrollView>

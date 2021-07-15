@@ -1,4 +1,7 @@
+import { HeaderButtons, Item } from 'react-navigation-header-buttons'
+
 import Cards from '../../component/card/Card'
+import HeaderButton from '../../component/headerbutton/HeaderButton'
 import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native'
@@ -146,5 +149,16 @@ export default Home
 Home.navigationOptions = (navData) => {
   return {
     headerTitle: () => <HeaderLogo />,
+    headerLeft: () => (
+      <HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item
+          title='Back Button'
+          iconName='arrow-back'
+          onPress={() => {
+            navData.navigation.goBack()
+          }}
+        />
+      </HeaderButtons>
+    ),
   }
 }

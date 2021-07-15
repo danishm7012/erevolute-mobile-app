@@ -2,7 +2,7 @@
   "expo": {
     "name": "eRevolute",
     "slug": "erevolute",
-    "description":"The Best Course Design for you crafted by professionals",
+    "description": "The Best Course Design for you crafted by professionals",
     "version": "1.0.0",
     "privacy": "public",
     "sdkVersion": "40.0.0",
@@ -29,7 +29,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#2e4d90"
-      }
+      },
+      "permissions": ["READ_EXTERNAL_STORAGE"]
     },
     "web": {
       "favicon": "./assets/favicon.png"
