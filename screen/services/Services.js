@@ -12,22 +12,6 @@ function Services(props) {
     <ScrollView style={{ flex: 1 }}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <ServicesCard
-          backColor='#fec20e'
-          iconColor='#121212'
-          heading='Amazon Account Management'
-          detail='Whether you’re fair getting begun or are an experienced dealer, the Amazon Commercial center could be a challenging environment. eRevolute clients for the most part drop …'
-          onSelect={() => {
-            props.navigation.navigate({
-              routeName: 'Services_Detail',
-              params: {
-                serId: '1',
-                heading: 'Amazon Account Management',
-                serImg: require('../../assets/eREVOLUTEServicesBanner/Amazon-Account-Management.jpg'),
-              },
-            })
-          }}
-        />
-        <ServicesCard
           backColor='#4772b7'
           iconColor='#fff'
           heading='eRevolute Investment Consortium'
@@ -36,7 +20,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '2',
+                serId: '1',
                 heading: 'eRevolute Investment Consortium',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/eRevolute-Investment-Consortium.jpg'),
               },
@@ -52,7 +36,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '3',
+                serId: '2',
                 heading: 'eRevolute Opportunity Club',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/eRevolute-Opportunity-Club.jpg'),
               },
@@ -68,7 +52,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '4',
+                serId: '3',
                 heading: 'Digital Marketing',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Digital-Marketing.jpg'),
               },
@@ -84,7 +68,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '5',
+                serId: '4',
                 heading: 'Ecommerce Store Development',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Ecommerce-Store-Development.jpg'),
               },
@@ -100,7 +84,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '6',
+                serId: '5',
                 heading: 'Amazon Account Rescue',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Amazon-Account-Rescue.jpg'),
               },
@@ -116,7 +100,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '7',
+                serId: '6',
                 heading: 'eRevolute Mentor Support',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Mentor-Support.jpg'),
               },
@@ -132,7 +116,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '8',
+                serId: '7',
                 heading: 'Product Hunting',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Product-Hunting.jpg'),
               },
@@ -148,7 +132,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '9',
+                serId: '8',
                 heading: 'Product Launching',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Product-Launching.jpg'),
               },
@@ -164,7 +148,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '10',
+                serId: '9',
                 heading: 'Product Photography & Designing',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Product-Photography-Designing.jpg'),
               },
@@ -180,7 +164,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '11',
+                serId: '10',
                 heading: 'Listing Optimization',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Listing-Optimization.jpg'),
               },
@@ -196,7 +180,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '12',
+                serId: '11',
                 heading: 'PPC Campaigns',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/PPC-Campaigns.jpg'),
               },
@@ -212,7 +196,7 @@ function Services(props) {
             props.navigation.navigate({
               routeName: 'Services_Detail',
               params: {
-                serId: '13',
+                serId: '12',
                 heading: 'Content Writing',
                 serImg: require('../../assets/eREVOLUTEServicesBanner/Content-Writing.jpg'),
               },

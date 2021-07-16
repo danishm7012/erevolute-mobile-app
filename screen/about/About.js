@@ -6,17 +6,11 @@ import HeaderButton from '../../component/headerbutton/HeaderButton'
 import HeaderLogo from '../../component/headerLogo/HeaderLogo'
 import React from 'react'
 import { ScrollView } from 'react-native'
-import SegmentedControlTab from 'react-native-segmented-control-tab'
 import SocialMediaIcon from '../../component/socialMediaIcon/SocialMediaIcon'
 
 let { width: screenWidth, height: screenHeight } = Dimensions.get('window')
 function AboutUs() {
   LogBox.ignoreLogs(['Setting a timer for a'])
-  const [selectedIndex, setSelectedIndex] = React.useState(0)
-
-  const handleSingleIndexSelect = (index) => {
-    setSelectedIndex(index)
-  }
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
@@ -45,7 +39,7 @@ function AboutUs() {
           <Text
             style={{ fontSize: 18, fontWeight: '700', paddingHorizontal: 15 }}
           >
-            The Best Course Design for you crafted by professionals
+            About eRevolute
           </Text>
           <Text
             style={{
@@ -56,12 +50,21 @@ function AboutUs() {
               lineHeight: 22.3,
             }}
           >
-            The Internet has essentially turned the world into a global village,
-            where everything and everyone is connected. If utilized right, it is
-            teeming with opportunities for blooming businesses and startups.
-            Overall it is an entire industry we can benefit from on a mass
-            level. We recognize this opportunity and bring you all the tools and
-            necessary information you need to make the most out of it.
+            eRevolute - A team of Amazon specialists and digital marketing
+            experts offer online courses and marketing solutions with
+            outstanding Amazon and digital marketing results to worldwide
+            companies. We connect online business thinking with professional
+            business website design and web development techniques, improving
+            search engines and pay-per-click, content creation, online
+            communications, and social media campaigns. In addition, we are
+            developing Amazon marketing campaigns for our students that cover
+            various technologies to achieve these marketing goals, whether it's
+            amazon dropshipping, amazon fba wholesale, eBay dropshipping,
+            virtual assistant, driving web traffic, generating potential Amazon
+            customers, e-commerce marketing strategies, Your company brand
+            awareness, sharing, etc. For eRevolute, it's all about returning on
+            investment and innovation to add value to your business through
+            online marketing and advertising.
           </Text>
         </View>
         <View
@@ -80,7 +83,7 @@ function AboutUs() {
               paddingHorizontal: 15,
             }}
           >
-            Interactive Learning
+            eRevolute Student Portal
           </Text>
           <View
             style={{
@@ -99,249 +102,30 @@ function AboutUs() {
               lineHeight: 22.3,
             }}
           >
-            The mistaken idea of denouncing pleasure and praising pain was born
-            and I will give.
-          </Text>
-        </View>
-        <View
-          style={{
-            flex: 1,
-            paddingVertical: 15,
-            marginTop: 9,
-            backgroundColor: '#fff',
-            elevation: 40,
-          }}
-        >
-          <Text
-            style={{ fontSize: 18, fontWeight: '700', paddingHorizontal: 15 }}
-          >
-            Exclusive Support
-          </Text>
-          <View
-            style={{
-              borderColor: Color.accentColour,
-              borderBottomWidth: 3,
-              width: screenWidth / 3,
-              marginLeft: 15,
-            }}
-          />
-          <Text
-            style={{
-              fontSize: 14,
-              marginTop: 10,
-              paddingHorizontal: 15,
-              letterSpacing: 0.3,
-              lineHeight: 22.3,
-            }}
-          >
-            Explain to you how all this mistaken idea of denouncing pleasure and
-            praising pain was born.
+            At eRevolute, we have a passion for considering the success of our
+            students. The range of professional Amazon Courses related to amazon
+            marketing and digital website advertising in search engines has
+            proven to deliver exceptional prosperity to our students and
+            customers. By partnering with Amazon's business accounts and top
+            rating experts, you will have professional Amazon tutors and site
+            advertising experts. eRevolute team members will be discouraged from
+            assisting you in achieving your Amazon business goals. We will
+            expand your online appearance through a digital marketing strategy,
+            confirmed by a range of the newest and best Amazon and digital
+            marketing services and tools used in Amazon and online marketing. As
+            one of the best online institutes, eRevolute relies not on easy
+            business solutions and shortcuts. The eRevolute will sit with you,
+            develop a proper Amazon product selling strategy, and teach you to
+            find the most reliable way to take your company/skills to the next
+            level. We hope our digital marketing and Amazon students will work
+            with us after the completion of the courses. eRevolute institute
+            also encourage our online students to enroll in any Amazon and
+            Digital Marketing course to get a job with us. eRevolute also offers
+            job to its first 1000 students if they pass their course with
+            remarkable outputs and marks. 
           </Text>
         </View>
 
-        <View
-          style={{
-            flex: 1,
-            paddingVertical: 15,
-            marginTop: 9,
-            backgroundColor: '#fff',
-            elevation: 40,
-          }}
-        >
-          <Text
-            style={{ fontSize: 18, fontWeight: '700', paddingHorizontal: 15 }}
-          >
-            Promoting Good Education since the very beginning
-          </Text>
-          <View
-            style={{
-              flex: 1,
-              flexDirection: 'row',
-              paddingVertical: 15,
-              marginTop: 9,
-              backgroundColor: '#fff',
-              justifyContent: 'space-around',
-            }}
-          >
-            <Image
-              style={{
-                resizeMode: 'stretch',
-                width: screenWidth / 3,
-                height: screenHeight / 9,
-              }}
-              source={require('../../assets/images/partner1.png')}
-            />
-            <Image
-              style={{
-                resizeMode: 'stretch',
-                width: screenWidth / 3,
-                height: screenHeight / 9,
-              }}
-              source={require('../../assets/images/partner2.png')}
-            />
-            <Image
-              style={{
-                resizeMode: 'stretch',
-                width: screenWidth / 3,
-                height: screenHeight / 9,
-              }}
-              source={require('../../assets/images/partner3.png')}
-            />
-          </View>
-        </View>
-        <SegmentedControlTab
-          values={['Our Vission', 'Our Motto', 'Our Goal']}
-          selectedIndex={selectedIndex}
-          tabStyle={{
-            borderColor: Color.accentColour,
-            borderWidth: 1,
-            backgroundColor: '#fff',
-          }}
-          activeTabStyle={{ backgroundColor: Color.primaryColour }}
-          activeTabTextStyle={{ fontSize: 14, fontWeight: '700' }}
-          tabTextStyle={{
-            fontSize: 14,
-            fontWeight: '700',
-            color: Color.primaryColour,
-          }}
-          onTabPress={handleSingleIndexSelect}
-          tabsContainerStyle={{
-            height: 40,
-            marginTop: 10,
-            marginHorizontal: 10,
-            // marginBottom: 10,
-          }}
-        />
-
-        {selectedIndex === 0 && (
-          <View
-            style={{
-              flex: 1,
-              paddingVertical: 15,
-              // marginTop: 9,
-              backgroundColor: '#fff',
-              elevation: 40,
-            }}
-          >
-            <Text
-              style={{ fontSize: 18, fontWeight: '700', paddingHorizontal: 15 }}
-            >
-              Our Vission
-            </Text>
-            <View
-              style={{
-                borderColor: Color.accentColour,
-                borderBottomWidth: 3,
-                width: screenWidth / 4.6,
-                marginLeft: 15,
-              }}
-            />
-            <Text
-              style={{
-                fontSize: 14,
-                marginTop: 10,
-                paddingHorizontal: 15,
-                letterSpacing: 0.3,
-                lineHeight: 22.3,
-              }}
-            >
-              We see eCommerce as a booming industry that will see a magnanimous
-              growth spurt in the years to come. Considering that, we envision
-              ourselves as one of the most entrusted providers of eCommerce
-              services in all aspects. We see this country full of new startups
-              and growing businesses like never before. These business
-              opportunities, in turn, will create jobs giving a thrust and
-              immense boost to the employment rates on the whole. We aspire to
-              make the business online business as easy as possible for you. We
-              are excited and ready to pave the road to success for everyone who
-              has a spark or a passion for eCommerce.
-            </Text>
-          </View>
-        )}
-
-        {selectedIndex === 1 && (
-          <View
-            style={{
-              flex: 1,
-              paddingVertical: 15,
-              backgroundColor: '#fff',
-              elevation: 40,
-            }}
-          >
-            <Text
-              style={{ fontSize: 18, fontWeight: '700', paddingHorizontal: 15 }}
-            >
-              Our Motto
-            </Text>
-            <View
-              style={{
-                borderColor: Color.accentColour,
-                borderBottomWidth: 3,
-                width: screenWidth / 6,
-                marginLeft: 15,
-              }}
-            />
-            <Text
-              style={{
-                fontSize: 14,
-                marginTop: 10,
-                paddingHorizontal: 15,
-                letterSpacing: 0.3,
-                lineHeight: 22.3,
-              }}
-            >
-              Our change-driven approach with a motto to transform the entire
-              landscape of e-commerce terrain is entirely what we aspire to
-              achieve. Efforts don’t go unrewarded, and our motto is to generate
-              growth opportunities for everyone, in a manner that is both
-              accessible and self-sustaining. As pioneering of cracking and
-              hackings the code of running a successful business, we know that
-              winning together is the best way forward. Thus, we bring you
-              several shots at learning the company individually, and that, in
-              turn, will help us in reaching our goal.
-            </Text>
-          </View>
-        )}
-        {selectedIndex === 2 && (
-          <View
-            style={{
-              flex: 1,
-              paddingVertical: 15,
-              backgroundColor: '#fff',
-              elevation: 40,
-            }}
-          >
-            <Text
-              style={{ fontSize: 18, fontWeight: '700', paddingHorizontal: 15 }}
-            >
-              Our Goal
-            </Text>
-            <View
-              style={{
-                borderColor: Color.accentColour,
-                borderBottomWidth: 3,
-                width: screenWidth / 8,
-                marginLeft: 15,
-              }}
-            />
-            <Text
-              style={{
-                fontSize: 14,
-                marginTop: 10,
-                paddingHorizontal: 15,
-                letterSpacing: 0.3,
-                lineHeight: 22.3,
-              }}
-            >
-              Your success is our goal! We want to see you all successful! We
-              would love to be surrounded by a whole revolutionized terrain of
-              successful e-commerce stores, up and running, blooming, and
-              flourishing. Our goal is to equip people with all the tools and
-              tactics of doing a business to make businesses self-sufficient and
-              self-sustaining.
-            </Text>
-          </View>
-        )}
         <View
           style={{
             flex: 1,
