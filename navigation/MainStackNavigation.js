@@ -187,6 +187,9 @@ const MainDrawerNavigator = createDrawerNavigator(
               </View>
             </View>
             <DrawerItems {...props} />
+            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                <Text style={{fontSize:20}}>Privacy Policy</Text>
+            </View>
             <Button
               title='LogOut'
               titleStyle={{ color: '#121212' }}
