@@ -1,5 +1,6 @@
 import { DrawerItems, createDrawerNavigator } from 'react-navigation-drawer'
 import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Linking, TouchableOpacity } from 'react-native'
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 
 import AboutStackNavigation from './AboutStackNavigation'
@@ -120,44 +121,11 @@ const MainDrawerNavigator = createDrawerNavigator(
       },
     },
 
-    // User_ScreenContactFormData: {
-    //   screen: UserScreenStackNavigation,
-    //   navigationOptions: {
-    //     drawerIcon: () => (
-    //       <Ionicons name='people-circle' size={29} color={Color.accentColour} />
-    //     ),
-    //     drawerLabel: 'User List',
-    //   },
-    // },
-
-    // Enroll_User_List: {
-    //   screen: EnrollCourseUserListStackNavigation,
-    //   navigationOptions: {
-    //     drawerIcon: () => (
-    //       <Ionicons name='people' size={29} color={Color.accentColour} />
-    //     ),
-    //     drawerLabel: 'Enroll Students',
-    //   },
-    // },
-
-    // AUTH: {
-    //   screen: AuthScreenStackNavigation,
-    //   navigationOptions: {
-    //     drawerIcon: () => (
-    //       <Ionicons
-    //         name='hand-left-sharp'
-    //         size={29}
-    //         color={Color.accentColour}
-    //       />
-    //     ),
-    //     drawerLabel: 'SignUp',
-    //   },
-    // },
     Career: {
       screen: CareerStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='shield-sharp' size={29} color={Color.primaryColour} />
+          <Ionicons name='paper-plane' size={29} color={Color.primaryColour} />
         ),
         drawerLabel: 'Career',
       },
@@ -165,7 +133,12 @@ const MainDrawerNavigator = createDrawerNavigator(
   },
   {
     contentComponent: (props) => {
+      const handlePrivacyPolicy = () => {
+        Linking.openURL('https://erevolute.org/privacy-policy/')
+      }
+
       const dispatch = useDispatch()
+
       return (
         <ScrollView showsVerticalScrollIndicator={false}>
           <SafeAreaView
@@ -187,9 +160,13 @@ const MainDrawerNavigator = createDrawerNavigator(
               </View>
             </View>
             <DrawerItems {...props} />
-            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-                <Text style={{fontSize:20}}>Privacy Policy</Text>
-            </View>
+            <TouchableOpacity
+              style={styles.privacyStyle}
+              onPress={handlePrivacyPolicy}
+            >
+              <Ionicons name='shield-sharp' size={29} color='#5571ad' />
+              <Text style={styles.privacyText}>Privacy Policy</Text>
+            </TouchableOpacity>
             <Button
               title='LogOut'
               titleStyle={{ color: '#121212' }}
@@ -348,24 +325,11 @@ const AdminDrawerNavigator = createDrawerNavigator(
       },
     },
 
-    // AUTH: {
-    //   screen: AuthScreenStackNavigation,
-    //   navigationOptions: {
-    //     drawerIcon: () => (
-    //       <Ionicons
-    //         name='hand-left-sharp'
-    //         size={29}
-    //         color={Color.primaryColor}
-    //       />
-    //     ),
-    //     drawerLabel: 'SignUp',
-    //   },
-    // },
     Career: {
       screen: CareerStackNavigation,
       navigationOptions: {
         drawerIcon: () => (
-          <Ionicons name='shield-sharp' size={29} color={Color.primaryColour} />
+          <Ionicons name='paper-plane' size={29} color={Color.primaryColour} />
         ),
         drawerLabel: 'Career',
       },
@@ -373,6 +337,9 @@ const AdminDrawerNavigator = createDrawerNavigator(
   },
   {
     contentComponent: (props) => {
+      const handlePrivacyPolicy = () => {
+        Linking.openURL('https://erevolute.org/privacy-policy/')
+      }
       const dispatch = useDispatch()
       return (
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -395,6 +362,13 @@ const AdminDrawerNavigator = createDrawerNavigator(
               </View>
             </View>
             <DrawerItems {...props} />
+            <TouchableOpacity
+              style={styles.privacyStyle}
+              onPress={handlePrivacyPolicy}
+            >
+              <Ionicons name='shield-sharp' size={29} color='#5571ad' />
+              <Text style={styles.privacyText}>Privacy Policy</Text>
+            </TouchableOpacity>
             <Button
               title='LogOut'
               titleStyle={{ color: '#121212' }}
@@ -453,5 +427,32 @@ const styles = StyleSheet.create({
     borderBottomColor: '#C0C0C0',
     borderBottomEndRadius: 38,
     borderBottomStartRadius: 38,
+  },
+  privacyStyle: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '75%',
+    alignItems: 'center',
+  },
+  activePrivacyPolicy: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '75%',
+    backgroundColor: Color.accentColour,
+    alignItems: 'center',
+  },
+  privacyText: {
+    color: '#808080',
+    fontSize: 18,
+    fontWeight: '700',
+    fontFamily: 'open-sans-bold',
+  },
+  activePrivacyText: {
+    color: Color.primaryColour,
+    fontSize: 18,
+    fontWeight: '700',
+    fontFamily: 'open-sans-bold',
   },
 })
